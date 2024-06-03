@@ -15,9 +15,4 @@ app.use("/",router,()=>{
     console.log("from console");
 })
 
-app.all("*",(req,res)=>{
-    res.status(404).json({message : "page not found"})
-    return console.log("Not Available");
-})
-
 app.listen(port,()=>{console.log(`Server is listening to port : http://localhost:${port}`);})
